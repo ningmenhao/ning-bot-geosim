@@ -1,0 +1,20 @@
+{
+  "name": "ning-bot",
+  "version": "1.2.0",
+  "description": "Geosim discord bot",
+  "main": "index.js",
+  "author": "Ningmenhao",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "10.14.0",
+    "npm": "6.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "license": "ISC"
+}
