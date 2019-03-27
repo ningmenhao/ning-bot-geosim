@@ -5,8 +5,6 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-console.log(auth.token);
-
 client.on("message", (message) => {
   
   if (message.author.bot) return;
