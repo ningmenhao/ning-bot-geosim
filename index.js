@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+﻿const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -69,12 +69,12 @@ client.on("message", (message) => {
   }
   
   if (message.content.includes("odd")) {
-    message.react(1??)
+    message.react(1️⃣)
     .then(reaction => console.log(typeof reaction));
   }
   
   if (message.content.includes("hugh")) {
-    message.react(??)
+    message.react(🤗)
     .then(reaction => console.log(typeof reaction));
   }
   
