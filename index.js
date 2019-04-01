@@ -29,7 +29,7 @@ client.on("message", (message) => {
       .then(function (guildMember, guildMemberId) {
         console.log(guildMemberId, guildMember.user.username)
       }).catch(function() {
-        //Something, I hate js
+        //Something, I don't code in JS
       });
     });
   }
