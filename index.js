@@ -23,9 +23,17 @@ client.on("message", (message) => {
        
   }
 
-  if (message.content.startsWith("!changeAll") && message.member.roles.find(r => r.name === "Moderator")){
+  if (message.content.startsWith("!changeAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
       console.log(guildMemberId, guildMember.user.username);
+      guildMember.setNickname(message.content.substring(20));
+    });
+  }
+
+  if (message.content.startsWith("!resetAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
+    message.guild.members.forEach(function(guildMember, guildMemberId) {
+      console.log(guildMemberId, guildMember.user.username);
+      guildMember.setNickname(guildMember.user.username);
     });
   }
   
