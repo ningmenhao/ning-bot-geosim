@@ -22,6 +22,12 @@ client.on("message", (message) => {
       });
        
   }
+
+  if (message.content.startsWith("!changeAll") && message.member.roles.find(r => r.name === "Moderator")){
+    message.guild.members.forEach(function(guildMember, guildMemberId) {
+      console.log(guildMemberId, guildMember.user.username);
+    });
+  }
   
   if (message.content.includes("ning")) {
     message.react(client.emojis.get("503376027356102656"))
