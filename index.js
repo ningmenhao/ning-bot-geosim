@@ -77,6 +77,16 @@ client.on("message", (message) => {
     message.react("🤗")
     .then(reaction => console.log(typeof reaction));
   }
+
+  if (message.content.includes("demonrat")) {
+    message.react("👿")
+    .then(reaction => console.log(typeof reaction))
+    .then(message.react("🐀"));
+  }
+
+  if (message.content.includes("@everyone") && message.channel.id != "229828751800795136") {
+    message.react("😠");
+  }
   
 });
 
