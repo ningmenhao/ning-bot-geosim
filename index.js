@@ -69,7 +69,7 @@ client.on("message", (message) => {
   }
   
   if (message.content.includes("odd")) {
-    message.react(1️⃣)
+    message.react(1⃣ )
     .then(reaction => console.log(typeof reaction));
   }
   
