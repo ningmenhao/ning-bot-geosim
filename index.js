@@ -25,15 +25,23 @@ client.on("message", (message) => {
 
   if (message.content.startsWith("!changeAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
-      console.log(guildMemberId, guildMember.user.username)
-      .then(guildMember.setNickname(message.content.substring(20)));
+      guildMember.setNickname(message.content.substring(20))
+      .then(function (guildMember, guildMemberId) {
+        console.log(guildMemberId, guildMember.user.username)
+      }).catch(function() {
+        //Something, I hate js
+      });
     });
   }
 
   if (message.content.startsWith("!resetAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
-      console.log(guildMemberId, guildMember.user.username)
-      .then(guildMember.setNickname(guildMember.user.username));
+      guildMember.setNickname(guildMember.user.username)
+      .then(function (guildMember, guildMemberId) {
+        console.log(guildMemberId, guildMember.user.username)
+      }).catch(function() {
+        //Something, I hate js
+      });
     });
   }
   
