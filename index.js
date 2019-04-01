@@ -119,6 +119,10 @@ client.on("message", (message) => {
   if (message.content.includes("@everyone") && message.channel.id != "229828751800795136") {
     message.react("😠");
   }
+
+  if (message.content.toLowerCase().includes("kulak")) {
+    message.react("🚜");
+  }
   
 });
 
