@@ -74,7 +74,7 @@ client.on("message", (message) => {
   }
 
   if (message.content.includes("hugh")) {
-    message.react(🤗)
+    message.react("🤗")
     .then(reaction => console.log(typeof reaction));
   }
   
