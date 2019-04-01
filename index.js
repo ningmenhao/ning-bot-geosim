@@ -23,7 +23,7 @@ client.on("message", (message) => {
        
   }
 
-  if (message.content.startsWith("!changeAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
+  if (message.content.startsWith("!changeAllNicknames") && (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Server Owner"))){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
       guildMember.setNickname(message.content.substring(20))
       .then(function (guildMember, guildMemberId) {
@@ -34,7 +34,7 @@ client.on("message", (message) => {
     });
   }
 
-  if (message.content.startsWith("!resetAllNicknames") && message.member.roles.find(r => r.name === "Moderator")){
+  if (message.content.startsWith("!resetAllNicknames") && (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Server Owner"))){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
       guildMember.setNickname(guildMember.user.username)
       .then(function (guildMember, guildMemberId) {
@@ -97,6 +97,16 @@ client.on("message", (message) => {
 
   if (message.content.includes("hugh")) {
     message.react("🤗")
+    .then(reaction => console.log(typeof reaction));
+  }
+
+  if (message.content.includes("liquid")) {
+    message.react("🚰")
+    .then(reaction => console.log(typeof reaction));
+  }
+
+  if (message.content.includes("erag")) {
+    message.react(client.emojis.get("465952650102571010"))
     .then(reaction => console.log(typeof reaction));
   }
 
