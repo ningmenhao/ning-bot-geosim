@@ -67,12 +67,12 @@ client.on("message", (message) => {
     message.react(client.emojis.get("539631984931241994"))
     .then(reaction => console.log(typeof reaction));
   }
-  
+
   if (message.content.includes("odd")) {
-    message.react(1⃣ )
+    message.react(client.emojis.get("465949712852320277"))
     .then(reaction => console.log(typeof reaction));
   }
-  
+
   if (message.content.includes("hugh")) {
     message.react(🤗)
     .then(reaction => console.log(typeof reaction));
