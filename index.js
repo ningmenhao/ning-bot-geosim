@@ -106,7 +106,7 @@ client.on("message", (message) => {
   }
 
   if (message.content.includes("erag")) {
-    message.react(client.emojis.get("465952650102571010"))
+    message.react(client.emojis.get("562489687873421332"))
     .then(reaction => console.log(typeof reaction));
   }
 
