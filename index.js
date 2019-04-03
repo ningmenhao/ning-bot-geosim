@@ -45,12 +45,12 @@ client.on("message", (message) => {
     });
   }
   
-  if (message.content.includes("ning")) {
+  if (message.content.includes("Ning")) {
     message.react(client.emojis.get("503376027356102656"))
     .then(reaction => console.log(typeof reaction));
   }
   
-  if (message.content.includes("ran")) {
+  if (message.content.includes("Ran")) {
     message.react(client.emojis.get("526619819349639188"))
     .then(reaction => console.log(typeof reaction));
   }
@@ -65,22 +65,22 @@ client.on("message", (message) => {
     .then(reaction => console.log(typeof reaction));
   }
   
-  if (message.content.includes("cav")) {
+  if (message.content.includes("Cav")) {
     message.react(client.emojis.get("529094281361620992"))
     .then(reaction => console.log(typeof reaction));
   }
   
-  if (message.content.includes("slime")) {
+  if (message.content.includes("Slime")) {
     message.react(client.emojis.get("539631337276178432"))
     .then(reaction => console.log(typeof reaction));
   }
   
-  if (message.content.includes("wren")) {
+  if (message.content.includes("Wren")) {
     message.react(client.emojis.get("505513510990643201"))
     .then(reaction => console.log(typeof reaction));
   }
   
-  if (message.content.includes("deusos")) {
+  if (message.content.includes("Deusos")) {
     message.react(client.emojis.get("513908869726994433"))
     .then(reaction => console.log(typeof reaction));
   }
@@ -90,7 +90,7 @@ client.on("message", (message) => {
     .then(reaction => console.log(typeof reaction));
   }
 
-  if (message.content.includes("odd")) {
+  if (message.content.includes("Odd")) {
     message.react(client.emojis.get("465949712852320277"))
     .then(reaction => console.log(typeof reaction));
   }
@@ -100,12 +100,12 @@ client.on("message", (message) => {
     .then(reaction => console.log(typeof reaction));
   }
 
-  if (message.content.includes("liquid")) {
+  if (message.content.includes("Liquid")) {
     message.react("🚰")
     .then(reaction => console.log(typeof reaction));
   }
 
-  if (message.content.includes("erag")) {
+  if (message.content.includes("Erag")) {
     message.react(client.emojis.get("562489687873421332"))
     .then(reaction => console.log(typeof reaction));
   }
