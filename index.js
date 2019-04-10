@@ -9,7 +9,9 @@ client.on("message", (message) => {
   
   if (message.author.bot) return;
   
-  if (message.guild.id == "521252926442962944") {
+  console.log(message.guild.id);
+
+  if (message.guild.id == "521252926442962944"){
     if (message.author.id == "150867542016000000") {
       message.react(client.emojis.get("565408397722255361"))
       .then(reaction => console.log(typeof reaction));
