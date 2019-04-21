@@ -9,6 +9,11 @@ client.on("message", (message) => {
   
   if (message.author.bot) return;
   
+  if (message.author.id == "185087773428940800") {
+    message.react("💩");
+    console.log(message.content+"\n");
+  }
+
   if (message.content.startsWith("**Suggestion**") && message.channel.id == "454033864323629059") {
     message.react("📌");
     console.log(message.content+"\n");
