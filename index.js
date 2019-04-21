@@ -21,7 +21,7 @@ client.on("message", (message) => {
     client.channels.get("454045860435722240").send("Suggestion from: "+message.member+"\n\n"+message.content.substring(15))
       .then(function (message) {
         message.react("⬆")
-        message.react("⬇")
+        .then(message.react("⬇"))
       }).catch(function() {
         //Something
       });
