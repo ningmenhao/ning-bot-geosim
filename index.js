@@ -76,15 +76,29 @@ client.on("message", (message) => {
   }
   
   if (message.content.includes("Wren")) {
-    message.react(client.emojis.get("505513510990643201"))
+    message.react(client.emojis.get("584563795003703296"))
     .then(reaction => console.log(typeof reaction));
   }
   
+  if (message.content.includes("gc")) {
+    message.react(client.emojis.get("584563530007707695"))
+    .then(reaction => console.log(typeof reaction));
+  }
+
   if (message.content.includes("Deusos")) {
     message.react(client.emojis.get("513908869726994433"))
     .then(reaction => console.log(typeof reaction));
   }
   
+  if (message.content.includes("derjagger")) {
+    message.react(client.emojis.get("584571574502555681"))
+    .then(reaction => console.log(typeof reaction));
+  }
+
+  if (message.content.includes("brantman")) {
+    message.react(client.emojis.get("584562235293171713"));
+  }
+
   if (message.content.includes("erhard")) {
     message.react(client.emojis.get("539631984931241994"))
     .then(reaction => console.log(typeof reaction));
