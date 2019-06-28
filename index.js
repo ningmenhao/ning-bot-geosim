@@ -115,7 +115,7 @@ client.on("message", (message) => {
   }
 
   if (message.content.includes("Liquid")) {
-    message.react("🚰")
+    message.react(client.emojis.get("589555612464185344"))
     .then(reaction => console.log(typeof reaction));
   }
 
