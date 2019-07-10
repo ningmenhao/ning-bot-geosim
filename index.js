@@ -138,6 +138,10 @@ client.on("message", (message) => {
     message.react("🚜");
   }
   
+  if (message.content.includes("Please clap.")) {
+    message.react("👏");
+  }
+  
 });
 
 client.login(process.env.BOT_TOKEN);
