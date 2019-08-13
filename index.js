@@ -124,7 +124,7 @@ client.on("message", (message) => {
     .then(reaction => console.log(typeof reaction));
   }
 
-  if (message.author.id === 194029156974067712) {
+  if (message.author.id === '194029156974067712') {
     message.react("🖕")
     .then(reaction => console.log("finger " + typeof reaction));
   }
