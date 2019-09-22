@@ -124,6 +124,11 @@ client.on("message", (message) => {
     .then(reaction => console.log(typeof reaction));
   }
 
+  if (message.content.includes("Mup")) {
+    message.react(client.emojis.get("592257528532828161"))
+    .then(reaction => console.log(typeof reaction));
+  }
+
   if (message.content.includes("demonrat")) {
     message.react("👿")
     .then(reaction => console.log(typeof reaction))
