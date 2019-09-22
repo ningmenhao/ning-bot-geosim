@@ -125,6 +125,11 @@ client.on("message", (message) => {
   }
 
   if (message.content.includes("Mup")) {
+    message.react(client.emojis.get("609457990503760016"))
+    .then(reaction => console.log(typeof reaction));
+  }
+
+  if (message.content.includes("Austrian")) {
     message.react(client.emojis.get("592257528532828161"))
     .then(reaction => console.log(typeof reaction));
   }
