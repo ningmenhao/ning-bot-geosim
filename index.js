@@ -121,14 +121,17 @@ client.on("message", message => {
       value => -1 !== message.content.indexOf(value)
     );
 
-    for (crime of thoughtCrimeDetails) {
-      message.channel.send(
-        "Attention <@" +
-          message.author.id +
-          ">: You have committed a thoughtcrime against the State. " +
-          thoughtCrimes[crime]
-      );
-    }
+    crime =
+      thoughtCrimeDetails[
+        Math.floor(Math.random() * thoughtCrimeDetails.length)
+      ];
+
+    message.channel.send(
+      "Attention <@" +
+        message.author.id +
+        ">: You have committed a thoughtcrime against the State. " +
+        thoughtCrimes[crime]
+    );
   }
 
   if (message.content.includes("demonrat")) {
