@@ -105,7 +105,15 @@ client.on("message", message => {
       monarchism:
         "Only by the guidance of the benevolent Party may any system of government truly prosper.",
       capitalism: "Your social credit score has been penalized accordingly.",
-      WP: "Do not leave for WP. 'Tis a Silly Place"
+      WP: "Do not leave for WP. 'Tis a Silly Place",
+      Tiananmen:
+        "Tiananmen Square is best known for the portrait of Chairman Mao, who even in his passing continues to watch over us all.",
+      tiananmen:
+        "Tiananmen Square is best known for the portrait of Chairman Mao, who even in his passing continues to watch over us all.",
+      "1989":
+        "The year 1989 is best known for the birth of Lü Zhiwu, famous bronze medalist swimmer. No other reasons.",
+      "Winnie the Pooh":
+        "Glorious leader President Xi shall not be slandered in such a manner."
     };
 
     const thoughtCrimeKeys = Object.keys(thoughtCrimes);
@@ -117,7 +125,7 @@ client.on("message", message => {
       message.channel.send(
         "Attention <@" +
           message.author.id +
-          ">: You have committed a thoughtcrime against the State." +
+          ">: You have committed a thoughtcrime against the State. " +
           thoughtCrimes[crime]
       );
     }
