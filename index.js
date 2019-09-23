@@ -20,7 +20,6 @@ client.on("message", (message) => {
       }).catch(function() {
         //Something
       });
-       
   }
 
   if (message.content.includes("capitalism") && message.channel.id == "569506101469380618") {
@@ -50,7 +49,25 @@ client.on("message", (message) => {
   }
   
   const reactions = {
-    "Ning": "503376027356102656"
+    "Ning": "503376027356102656",
+    "Ran": "526619819349639188",
+    "Insert": "542566785862467584",
+    "kai": "535933767127138332",
+    "Cav": "529094281361620992",
+    "Slime": "539631337276178432",
+    "Wren": "584563795003703296",
+    "GC": "584563530007707695",
+    "Deusos": "513908869726994433",
+    "derjagger": "584571574502555681",
+    "brantman": "584562235293171713",
+    "erhard": "539631984931241994",
+    "Odd": "465949712852320277",
+    "hugh": "🤗",
+    "Liquid": "589555612464185344",
+    "Erag": "562489687873421332",
+    "Mup": "592257528532828161",
+    "Austrian": "609457990503760016",
+    "Please clap": "👏"
   }
 
   const reactionKeys = Object.keys(reactions);
@@ -59,90 +76,6 @@ client.on("message", (message) => {
 
   for (response in responseActions) {
     message.react(client.emojis.get(reactions[response]))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("Ran")) {
-    message.react(client.emojis.get("526619819349639188"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("Insert")) {
-    message.react(client.emojis.get("542566785862467584"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("kai")) {
-    message.react(client.emojis.get("535933767127138332"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("Cav")) {
-    message.react(client.emojis.get("529094281361620992"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("Slime")) {
-    message.react(client.emojis.get("539631337276178432"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("Wren")) {
-    message.react(client.emojis.get("584563795003703296"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("gc")) {
-    message.react(client.emojis.get("584563530007707695"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Deusos")) {
-    message.react(client.emojis.get("513908869726994433"))
-    .then(reaction => console.log(typeof reaction));
-  }
-  
-  if (message.content.includes("derjagger")) {
-    message.react(client.emojis.get("584571574502555681"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("brantman")) {
-    message.react(client.emojis.get("584562235293171713"));
-  }
-
-  if (message.content.includes("erhard")) {
-    message.react(client.emojis.get("539631984931241994"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Odd")) {
-    message.react(client.emojis.get("465949712852320277"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("hugh")) {
-    message.react("🤗")
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Liquid")) {
-    message.react(client.emojis.get("589555612464185344"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Erag")) {
-    message.react(client.emojis.get("562489687873421332"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Mup")) {
-    message.react(client.emojis.get("592257528532828161"))
-    .then(reaction => console.log(typeof reaction));
-  }
-
-  if (message.content.includes("Austrian")) {
-    message.react(client.emojis.get("609457990503760016"))
     .then(reaction => console.log(typeof reaction));
   }
 
@@ -158,12 +91,7 @@ client.on("message", (message) => {
 
   if (message.content.toLowerCase().includes("kulak")) {
     message.react("🚜");
-  }
-  
-  if (message.content.includes("Please clap.")) {
-    message.react("👏");
-  }
-  
+  }  
 });
 
 client.login(process.env.BOT_TOKEN);
