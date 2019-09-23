@@ -24,7 +24,7 @@ client.on("message", (message) => {
   }
 
   if (message.content.includes("capitalism") && message.channel.id == "569506101469380618") {
-    message.reply("Attention <@" + message.author.id + ">: You have committed a thoughtcrime against the State. Your social credit score has been decreased correspondingly.")
+    message.channel.send("Attention <@" + message.author.id + ">: You have committed a thoughtcrime against the State. Your social credit score has been decreased correspondingly.")
   }
 
   if (message.content.startsWith("!changeAllNicknames") && (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Server Owner"))){
@@ -49,8 +49,16 @@ client.on("message", (message) => {
     });
   }
   
-  if (message.content.includes("Ning")) {
-    message.react(client.emojis.get("503376027356102656"))
+  const reactions = {
+    "Ning": "503376027356102656"
+  }
+
+  const reactionKeys = Object.keys(reactions);
+
+  const responseActions = reactionKeys.filter(value => -1 !== message.indexOf(value));
+
+  for (response in responseActions) {
+    message.react(client.emojis.get(reactions[response]))
     .then(reaction => console.log(typeof reaction));
   }
   
