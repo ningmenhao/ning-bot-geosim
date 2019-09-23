@@ -100,9 +100,12 @@ client.on("message", message => {
 
   if (message.channel.id == "569506101469380618") {
     const thoughtCrimes = {
-      "massa":
+      massa:
         'All suggestions of the existence of project "War Canoe" are lies and falsehoods.',
-        "monarchism": 'Only by the guidance of the benevolent Party may any system of government truly prosper.'
+      monarchism:
+        "Only by the guidance of the benevolent Party may any system of government truly prosper.",
+      capitalism: "Your social credit score has been penalized accordingly.",
+      WP: "Do not leave for WP. 'Tis a Silly Place"
     };
 
     const thoughtCrimeKeys = Object.keys(thoughtCrimes);
@@ -110,12 +113,12 @@ client.on("message", message => {
       value => -1 !== message.content.indexOf(value)
     );
 
-    for (detail of thoughtCrimeDetails) {
+    for (crime of thoughtCrimeDetails) {
       message.channel.send(
         "Attention <@" +
           message.author.id +
           ">: You have committed a thoughtcrime against the State." +
-          detail
+          thoughtCrimes[crime]
       );
     }
   }
