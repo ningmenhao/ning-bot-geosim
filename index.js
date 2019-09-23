@@ -72,7 +72,7 @@ client.on("message", (message) => {
 
   const reactionKeys = Object.keys(reactions);
 
-  const responseActions = reactionKeys.filter(value => -1 !== message.indexOf(value));
+  const responseActions = reactionKeys.filter(value => -1 !== message.content.indexOf(value));
 
   for (response of responseActions) {
     message.react(client.emojis.get(reactions[response]))
