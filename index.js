@@ -23,6 +23,10 @@ client.on("message", (message) => {
        
   }
 
+  if (message.content.includes("capitalism") && message.channel.id == "569506101469380618") {
+    message.reply("Attention <@" + message.author.id + ">: You have committed a thoughtcrime against the State. Your social credit score has been decreased correspondingly.")
+  }
+
   if (message.content.startsWith("!changeAllNicknames") && (message.member.roles.find(r => r.name === "Moderator") || message.member.roles.find(r => r.name === "Server Owner"))){
     message.guild.members.forEach(function(guildMember, guildMemberId) {
       guildMember.setNickname(message.content.substring(20))
