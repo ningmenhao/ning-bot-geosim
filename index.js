@@ -86,8 +86,7 @@ client.on("message", message => {
     Austrian: "609457990503760016",
     "Please clap": "👏",
     Louisiana: "622666712101158933",
-    Crooked: "567522921342435338",
-    Amber: "🇪🇺"
+    Crooked: "567522921342435338"
   };
 
   const reactionKeys = Object.keys(reactions);
@@ -98,7 +97,14 @@ client.on("message", message => {
   for (response of responseActions) {
     message
       .react(client.emojis.get(reactions[response]))
-      .then(reaction => console.log(typeof reaction));
+      .then(reaction => console.log(typeof reaction))
+      .catch(() =>
+        console.error("Failed to react with " + reactions[response])
+      );
+  }
+
+  if (message.content.includes("Amber")) {
+    message.react();
   }
 
   if (message.channel.id == "569506101469380618") {
