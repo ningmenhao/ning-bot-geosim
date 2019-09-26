@@ -85,7 +85,7 @@ client.on("message", message => {
     Mup: "592257528532828161",
     Austrian: "609457990503760016",
     "Please clap": "👏",
-    Louisiana: "622666760054898689"
+    Louisiana: "622666712101158933"
   };
 
   const reactionKeys = Object.keys(reactions);
