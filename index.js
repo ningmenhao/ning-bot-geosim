@@ -99,10 +99,10 @@ client.on("message", message => {
   for (response of responseActions) {
     message
       .react(client.emojis.get(reactions[response]))
-      .then(reaction => console.log(typeof reaction))
       .catch(() =>
         console.error("Failed to react with " + reactions[response])
-      );
+      )
+      .then(reaction => console.log(typeof reaction));
   }
 
   if (message.content.includes("Did you ever hear the tragedy of Muppet the Coder?")) {
