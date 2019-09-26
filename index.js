@@ -84,7 +84,8 @@ client.on("message", message => {
     Erag: "562489687873421332",
     Mup: "592257528532828161",
     Austrian: "609457990503760016",
-    "Please clap": "👏"
+    "Please clap": "👏",
+    Louisiana: "622666760054898689"
   };
 
   const reactionKeys = Object.keys(reactions);
