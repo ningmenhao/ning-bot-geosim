@@ -88,7 +88,7 @@ client.on("message", message => {
     Louisiana: "622666712101158933",
     Crooked: "567522921342435338",
     Amber: "626927140855742484",
-    Woo: "🇴"
+    Woo: ""
   };
 
   const reactionKeys = Object.keys(reactions);
@@ -97,16 +97,23 @@ client.on("message", message => {
   );
 
   for (response of responseActions) {
-    message
-      .react(client.emojis.get(reactions[response]))
-      .catch(() =>
-        console.error("Failed to react with " + reactions[response])
-      )
-      .then(reaction => console.log(typeof reaction));
+    try {
+      message
+        .react(client.emojis.get(reactions[response]))
+        .then(reaction => console.log(typeof reaction));
+    } catch (err) {
+      console.error("Failed to react with " + reactions[response]);
+    }
   }
 
-  if (message.content.includes("Did you ever hear the tragedy of Muppet the Coder?")) {
-    message.channel.send("I thought not. It's not a story Ning would tell you. It's a player legend. Muppet was a Coder of the Code, so powerful and so wise he could use the Force to influence the bits to create mediocre jokes... He had such a knowledge of the code that he could even give the ones he cared about their own mediocre joke responses. The dark side of Code is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he tried to change the very fabric of the bot, but it crashed while he was working on it. Ironic, he could build a bot to complete half the subreddit modwork, but broke the one that delivered mediocre joke responses");
+  if (
+    message.content.includes(
+      "Did you ever hear the tragedy of Muppet the Coder?"
+    )
+  ) {
+    message.channel.send(
+      "I thought not. It's not a story Ning would tell you. It's a player legend. Muppet was a Coder of the Code, so powerful and so wise he could use the Force to influence the bits to create mediocre jokes... He had such a knowledge of the code that he could even give the ones he cared about their own mediocre joke responses. The dark side of Code is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he tried to change the very fabric of the bot, but it crashed while he was working on it. Ironic, he could build a bot to complete half the subreddit modwork, but broke the one that delivered mediocre joke responses"
+    );
   }
 
   if (message.channel.id == "569506101469380618") {
