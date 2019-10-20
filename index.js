@@ -99,7 +99,7 @@ client.on("message", message => {
   for (response of responseActions) {
     try {
       message
-        .react(client.emojis.get(reactions[response]))
+        .react(reactions[response])
         .then(reaction => console.log(typeof reaction));
     } catch (err) {
       console.error("Failed to react with " + reactions[response]);
