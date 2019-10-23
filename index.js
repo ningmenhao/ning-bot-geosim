@@ -66,7 +66,6 @@ client.on("message", message => {
   }
 
   const reactions = {
-    Ning: "503376027356102656",
     Ran: "526619819349639188",
     Insert: "542566785862467584",
     kai: "535933767127138332",
