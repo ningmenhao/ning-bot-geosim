@@ -89,7 +89,8 @@ client.on("message", message => {
     Amber: "626927140855742484",
     Wooo: "635370361386696724",
     Pike: "638380296026324992",
-    Kuroko: "626255320590712834"
+    Kuroko: "626255320590712834",
+    wooo: "635370361386696724"
   };
 
   const reactionKeys = Object.keys(reactions);
