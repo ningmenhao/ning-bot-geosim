@@ -88,7 +88,8 @@ client.on("message", message => {
     Crooked: "567522921342435338",
     Amber: "626927140855742484",
     Wooo: "635370361386696724",
-    Pike: "638380296026324992"
+    Pike: "638380296026324992",
+    Kuroko: "626255320590712834"
   };
 
   const reactionKeys = Object.keys(reactions);
