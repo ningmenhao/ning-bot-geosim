@@ -142,20 +142,19 @@ client.on("message", message => {
       value => -1 !== message.content.indexOf(value)
     );
 
-    if (thoughtCrimeDetails.length > 0) {
-      crime =
-        thoughtCrimeDetails[
-          Math.floor(Math.random() * thoughtCrimeDetails.length)
-        ];
+    //if (thoughtCrimeDetails.length > 0) {
+    //  crime =
+    //   thoughtCrimeDetails[
+    //      Math.floor(Math.random() * thoughtCrimeDetails.length)
+    //    ];
 
-      message.channel.send(
-        "Attention <@" +
-          message.author.id +
-          ">: You have committed a thoughtcrime against the State. " +
-          thoughtCrimes[crime]
-      );
+    //  message.channel.send(
+    //    "Attention <@" +
+    //      message.author.id +
+    //      ">: You have committed a thoughtcrime against the State. " +
+    //      thoughtCrimes[crime]
+    //  );
     }
-  }
 
   if (message.content.includes("demonrat")) {
     message
