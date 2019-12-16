@@ -92,7 +92,10 @@ client.on("message", message => {
     Pike: "638380296026324992",
     Kuroko: "626255320590712834",
     wooo: "635370361386696724",
-    austrian: "609457990503760016"
+    austrian: "609457990503760016",
+    pike: "638380296026324992",
+    "ah yes": "656259706288865300",
+    "Ah yes": "656259706288865300"
   };
 
   const reactionKeys = Object.keys(reactions);
