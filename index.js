@@ -10,7 +10,7 @@ client.on("message", message => {
 
   if (
     message.content.startsWith("**Suggestion**") &&
-    message.channel.id == "454033864323629059"
+    message.channel.id == "666083207568949257"
   ) {
     message.react("📌");
     console.log(message.content + "\n");
