@@ -99,7 +99,9 @@ client.on("message", message => {
     Expert: "690520163048488960",
     Mac: "690523641699500044",
     "ah yes": "656259706288865300",
-    "Ah yes": "656259706288865300"
+    "Ah yes": "656259706288865300",
+    jae: "691226217592127548",
+    Jae: "691226217592127548"
   };
 
   const reactionKeys = Object.keys(reactions);
