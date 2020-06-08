@@ -101,7 +101,9 @@ client.on("message", message => {
     "ah yes": "656259706288865300",
     "Ah yes": "656259706288865300",
     jae: "691226217592127548",
-    Jae: "691226217592127548"
+    Jae: "691226217592127548",
+    Bob: "719379764481359923",
+    bob: "719379764481359923"
   };
 
   const reactionKeys = Object.keys(reactions);
