@@ -185,6 +185,15 @@ client.on("message", message => {
   if (message.content.toLowerCase().includes("kulak")) {
     message.react("🚜");
   }
+
+  if (message.content === "!date") {
+    let seasonStart = new Date(2020, 2, 15);
+    let now = Date.now();
+    let year = Math.floor((now - seasonStart)/604800000).toString();
+    let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
+    let month = lookup[Date.getUTCDay()];
+    message.channel.send("The date is " + month + " " + year + ".");
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
