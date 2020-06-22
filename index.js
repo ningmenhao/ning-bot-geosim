@@ -187,11 +187,11 @@ client.on("message", message => {
   }
 
   if (message.content === "!date") {
-    let seasonStart = new Date(2020, 2, 15);
+    let seasonStart = Date.UTC(2020, 2, 15);
     let now = Date.now();
-    let year = Math.floor((now - seasonStart)/604800000).toString();
+    let year = (Math.floor((now - seasonStart)/604800000) + 2020).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
-    let month = lookup[Date.getUTCDay()];
+    let month = lookup[new Date().getDay()];
     message.channel.send("The date is " + month + " " + year + ".");
   }
 });
