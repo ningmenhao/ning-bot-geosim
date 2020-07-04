@@ -103,7 +103,9 @@ client.on("message", message => {
     jae: "691226217592127548",
     Jae: "691226217592127548",
     Bob: "719379764481359923",
-    bob: "719379764481359923"
+    bob: "719379764481359923",
+    Light: "692257534907777024",
+    light: "692257534907777024"
   };
 
   const reactionKeys = Object.keys(reactions);
