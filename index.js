@@ -105,7 +105,11 @@ client.on("message", message => {
     Bob: "730906776899158107",
     bob: "730906776899158107",
     Light: "692257534907777024",
-    light: "692257534907777024"
+    light: "692257534907777024",
+    Martin: "735077221232017478",
+    martin: "735077221232017478",
+    Crystal: "735077221232017478",
+    crystal: "735077221232017478"
   };
 
   const reactionKeys = Object.keys(reactions);
