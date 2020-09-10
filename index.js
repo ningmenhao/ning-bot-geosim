@@ -109,7 +109,11 @@ client.on("message", message => {
     Martin: "735077221232017478",
     martin: "735077221232017478",
     Crystal: "735077221232017478",
-    crystal: "735077221232017478"
+    crystal: "735077221232017478",
+    Sharky: "752381186365718598",
+    sharky: "752381186365718598",
+    TQ: "566813126843039744",
+    tq: "566813126843039744"
   };
 
   const reactionKeys = Object.keys(reactions);
