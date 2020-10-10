@@ -197,7 +197,7 @@ client.on("message", message => {
   }
 
   if (message.content === "!date") {
-    let seasonStart = Date.UTC(2020, 6, 5);
+    let seasonStart = Date.UTC(2020, 9, 4);
     let now = Date.now();
     let year = (Math.floor((now - seasonStart)/604800000) + 2020).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
