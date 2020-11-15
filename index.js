@@ -112,8 +112,8 @@ client.on("message", message => {
     crystal: "735077221232017478",
     Sharky: "752381186365718598",
     sharky: "752381186365718598",
-    TQ: "566813126843039744",
-    tq: "566813126843039744"
+    TQ: "777422893008814111",
+    tq: "777422893008814111"
   };
 
   const reactionKeys = Object.keys(reactions);
