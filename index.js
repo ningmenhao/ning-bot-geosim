@@ -19,7 +19,7 @@ client.on("message", message => {
       .get("454045860435722240")
       .send(
         "Suggestion from: " +
-          message.member +
+          message.member() +
           "\n\n" +
           message.content.substring(15)
       )
@@ -161,19 +161,6 @@ client.on("message", message => {
     const thoughtCrimeDetails = thoughtCrimeKeys.filter(
       value => -1 !== message.content.indexOf(value)
     );
-
-    //if (thoughtCrimeDetails.length > 0) {
-    //  crime =
-    //   thoughtCrimeDetails[
-    //      Math.floor(Math.random() * thoughtCrimeDetails.length)
-    //    ];
-
-    //  message.channel.send(
-    //    "Attention <@" +
-    //      message.author.id +
-    //      ">: You have committed a thoughtcrime against the State. " +
-    //      thoughtCrimes[crime]
-    //  );
     }
 
   if (message.content.includes("demonrat")) {
