@@ -19,7 +19,7 @@ client.on("message", message => {
       .get("454045860435722240")
       .send(
         "Suggestion from: " +
-          message.author.name +
+          message.author.username +
           "\n\n" +
           message.content.substring(15)
       )
