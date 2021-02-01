@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -113,7 +113,6 @@ client.on("message", message => {
     sharky: "752381186365718598",
     TQ: "777422893008814111",
     tq: "777422893008814111",
-    era: "798317390529822753",
     Era: "798317390529822753"
   };
 
@@ -198,9 +197,9 @@ client.on("message", message => {
   }
 
   if (message.content === "!date") {
-    let seasonStart = Date.UTC(2020, 9, 4);
+    let season0thSunday = Date.UTC(2021, 0, 31); // Remember months count from 0
     let now = Date.now();
-    let year = (Math.floor((now - seasonStart)/604800000) + 2020).toString();
+    let year = (Math.floor((now - season0thSunday)/604800000) + 2020).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
     let month = lookup[new Date().getDay()];
     message.channel.send("The date is " + month + " " + year + ".");
