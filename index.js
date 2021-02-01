@@ -1,4 +1,4 @@
-﻿const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -113,7 +113,6 @@ client.on("message", message => {
     sharky: "752381186365718598",
     TQ: "777422893008814111",
     tq: "777422893008814111",
-    era: "798317390529822753",
     Era: "798317390529822753"
   };
 
