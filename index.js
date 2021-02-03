@@ -202,7 +202,8 @@ client.on("message", message => {
     let year = (Math.floor((now - season0thSunday)/604800000) + 2021).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
     let month = lookup[new Date().getDay()];
-    message.channel.send("The date is " + month + " " + year + ".");
+    //message.channel.send("The date is " + month + " " + year + ".");
+    message.channel.send("!date");
   }
 });
 
