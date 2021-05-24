@@ -197,7 +197,7 @@ client.on("message", message => {
   }
 
   if (message.content === "!date") {
-    let season0thSunday = Date.UTC(2021, 0, 31); // Remember months count from 0
+    let season0thSunday = Date.UTC(2021, 4, 23); // Remember months count from 0
     let now = Date.now();
     let year = (Math.floor((now - season0thSunday)/604800000) + 2021).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
