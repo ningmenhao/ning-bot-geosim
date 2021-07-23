@@ -26,7 +26,7 @@ client.on("message", message => {
       .get("454045860435722240")
       .send(
         "Suggestion from: " +
-          message.member() +
+         message.author.username +
           "\n\n" +
           message.content.substring(15)
       )
@@ -85,7 +85,8 @@ client.on("message", message => {
     GC: "584563530007707695",
     Deusos: "513908869726994433",
     derjagger: "584571574502555681",
-    brantman: "584562235293171713",
+    brant: "584562235293171713",
+    Brant: "584562235293171713",
     erhard: "539631984931241994",
     Odd: "465949712852320277",
     hugh: "🤗",
@@ -119,7 +120,8 @@ client.on("message", message => {
     Sharky: "752381186365718598",
     sharky: "752381186365718598",
     TQ: "777422893008814111",
-    tq: "777422893008814111"
+    tq: "777422893008814111",
+    Era: "798317390529822753"
   };
 
   const reactionKeys = Object.keys(reactions);
@@ -190,9 +192,9 @@ client.on("message", message => {
   }
 
   if (message.content === "!date") {
-    let seasonStart = Date.UTC(2020, 9, 4);
+    let season0thSunday = Date.UTC(2021, 4, 23); // Remember months count from 0
     let now = Date.now();
-    let year = (Math.floor((now - seasonStart)/604800000) + 2020).toString();
+    let year = (Math.floor((now - season0thSunday)/604800000) + 2021).toString();
     let lookup = ["January", "February/March", "April/May", "June", "July/August", "September/October", "November/December"];
     let month = lookup[new Date().getDay()];
     message.channel.send("The date is " + month + " " + year + ".");
