@@ -12,6 +12,13 @@ client.on("message", message => {
     message.content.startsWith("**Suggestion**") &&
     message.channel.id == "666083207568949257"
   ) {
+    if (
+        message.member.roles.find(r => r.id === '868027969824768040')
+    ) {
+        // do something
+        console.log(message.content + "\n");
+    }
+    else {
     message.react("📌");
     console.log(message.content + "\n");
 
@@ -29,6 +36,7 @@ client.on("message", message => {
       .catch(function() {
         //Something
       });
+      }
   }
 
   if (
