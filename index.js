@@ -9,11 +9,27 @@ client.on("message", message => {
   if (message.author.bot) return;
 
   if (
+    message.channel.id == "666076150912647168" &&
+    message.member.id == "132648639922307073"
+  ) {
+    client.channels
+        .get("454045860435722240")
+        .send(
+          "Testing in dev? How irresponsible..."
+    );
+    if (
+      message.member.roles.cache.has('868027969824768040')
+    ) {
+        console.log("Fix yourself " + message.content + "\n");
+    } 
+  }
+
+  if (
     message.content.startsWith("**Suggestion**") &&
     message.channel.id == "666083207568949257"
   ) {
     if (
-        message.member.roles.find(r => r.id === 868027969824768040)
+        message.member.roles.cache.has('868027969824768040')
     ) {
         // do something
         console.log(message.content + "\n");
