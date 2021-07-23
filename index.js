@@ -13,10 +13,11 @@ client.on("message", message => {
     message.member.id == "132648639922307073"
   ) {
     client.channels
-        .get("454045860435722240")
+        .get("666076150912647168")
         .send(
           "Testing in dev? How irresponsible..."
     );
+    console.log(message.member.roles.cache + "\n");
     if (
       message.member.roles.cache.has('868027969824768040')
     ) {
