@@ -17,6 +17,10 @@ client.on("message", message => {
         .send(
           "Testing in dev? How irresponsible..."
     );
+    console.log("Testing in dev? Irresponosible...\n");
+    console.log("User: " + message.member.id + "\n");
+    console.log(message.member+ "\n");
+    console.log(message.member.roles+"\n");
     console.log(message.member.roles.cache + "\n");
     if (
       message.member.roles.cache.has('868027969824768040')
