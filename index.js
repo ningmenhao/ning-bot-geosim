@@ -21,9 +21,9 @@ client.on("message", message => {
     console.log("User: " + message.member.id + "\n");
     console.log(message.member+ "\n");
     console.log(message.member.roles+"\n");
-    console.log(message.member.roles.cache + "\n");
+    console.log(message.member.roles + "\n");
     if (
-      message.member.roles.cache.has('868027969824768040')
+      message.member.roles.find(r => r.name === "868027969824768040")
     ) {
         console.log("Fix yourself " + message.content + "\n");
     } 
