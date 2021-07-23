@@ -18,7 +18,7 @@ client.on("message", message => {
     console.log(message.member.roles+"\n");
     console.log(message.member.roles + "\n");
     if (
-      message.member.roles.find(r => r.id === "868027969824768040")
+      message.member.roles.find(r => r.name === "Suggestions Mute")
     ) {
         console.log("Fix yourself " + message.content + "\n");
     } 
