@@ -29,8 +29,9 @@ client.on("message", message => {
     message.channel.id == "666083207568949257"
   ) {
     if (
-        message.member.roles.cache.has('868027969824768040')
+      message.member.roles.find(r => r.name === "Suggestions Mute")
     ) {
+      message.react("👎");
         // do something
         console.log(message.content + "\n");
     }
