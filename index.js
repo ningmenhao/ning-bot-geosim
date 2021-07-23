@@ -12,18 +12,13 @@ client.on("message", message => {
     message.channel.id == "666076150912647168" &&
     message.member.id == "132648639922307073"
   ) {
-    client.channels
-        .get("666076150912647168")
-        .send(
-          "Testing in dev? How irresponsible..."
-    );
     console.log("Testing in dev? Irresponosible...\n");
     console.log("User: " + message.member.id + "\n");
     console.log(message.member+ "\n");
     console.log(message.member.roles+"\n");
     console.log(message.member.roles + "\n");
     if (
-      message.member.roles.find(r => r.name === "868027969824768040")
+      message.member.roles.find(r => r.id === "868027969824768040")
     ) {
         console.log("Fix yourself " + message.content + "\n");
     } 
