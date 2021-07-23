@@ -13,30 +13,30 @@ client.on("message", message => {
     message.channel.id == "666083207568949257"
   ) {
     if (
-        message.member.roles.find(r => r.id === '868027969824768040')
+        message.member.roles.find(r => r.id === 868027969824768040)
     ) {
         // do something
         console.log(message.content + "\n");
     }
     else {
-    message.react("📌");
-    console.log(message.content + "\n");
+      message.react("📌");
+      console.log(message.content + "\n");
 
-    client.channels
-      .get("454045860435722240")
-      .send(
-        "Suggestion from: " +
-         message.author.username +
-          "\n\n" +
-          message.content.substring(15)
-      )
-      .then(function(message) {
-        message.react("⬆").then(message.react("⬇"));
-      })
-      .catch(function() {
-        //Something
-      });
-      }
+      client.channels
+        .get("454045860435722240")
+        .send(
+          "Suggestion from: " +
+          message.author.username +
+            "\n\n" +
+            message.content.substring(15)
+        )
+        .then(function(message) {
+          message.react("⬆").then(message.react("⬇"));
+        })
+        .catch(function() {
+          //Something
+        });
+    }
   }
 
   if (
