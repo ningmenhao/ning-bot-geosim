@@ -16,7 +16,7 @@ module.exports = {
 			.setTimestamp();
 
 
-		const suggestion_channel = interaction.client.channels.cache.get('874105951676952636');
+		const suggestion_channel = interaction.client.channels.cache.get('454045860435722240');
 		suggestion_channel.send({ embeds: [exampleEmbed] }).then(message => message.react('⬆')).then(messageReaction => messageReaction.message.react('⬇'));
 		await interaction.reply('Suggestion submitted!');
 	},
