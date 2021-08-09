@@ -1,0 +1,8 @@
+node_modules
+.envrc
+config.json
+.direnv
+.vscode
+.eslintrc.json
+.nvmrc
+package-lock.json

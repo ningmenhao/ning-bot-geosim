@@ -1,0 +1,28 @@
+[
+    {
+        "name": "ping",
+        "description": "Reply with pong"
+    },
+    {
+        "name": "date",
+        "description": "Reply with the ingame date"
+    },
+    {
+        "name": "suggestion",
+        "description": "Submit a suggestion for review",
+        "options": [
+            {
+                "name": "title",
+                "description": "Title of the suggestion",
+                "type": 3,
+                "required": true
+            },
+            {
+                "name": "description",
+                "description": "Description of the suggestion",
+                "type": 3,
+                "required": true
+            }
+        ]
+    }
+]
