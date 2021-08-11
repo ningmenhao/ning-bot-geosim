@@ -1,12 +1,10 @@
-# Discord.js Discord bot template
-basic bot template with command handler. Follows along with the documentation provided by [discordjs.guide](https://discordjs.guide).
+# geosim-discord-helper
+This is a basic bot designed specifically for the [Geosim](https://www.reddit.com/r/geosim) community.. Follows along with the documentation provided by [discordjs.guide](https://discordjs.guide). This bot is deployed on Heroku.
 
-Change Token in ``token.json``
+Tokens, Bot ID, and Guild ID are set with environmental variables.
 
-make commands in ``commands`` folder
+Add slash commands in the ``commands`` folder. Deploy slash commands via the ``deploy.py`` script.
 
-there is ``ping`` command in ``commands`` folder
-the default prefix of the bot is ``!`` you can change this in the ``config.json``
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -42,9 +40,7 @@ what is the api used to connect to discord
 
 Getting this bot and starting it
 ```
-Download this project as a zip file then move the zip file to the folder you created
-then unzip it there then put token in the token.json to get a token goto Discord Developer Site link below
-after you have token in token.json and have installed discord.js you can start bot by typing node app.js
+Clone this repository
 ```
 [Discord Developer Site](https://discordapp.com/developers/applications/)
 
@@ -57,8 +53,10 @@ to install nodemon globally type npm i -g nodemon
 ## Authors
 
 * **CappeDiem** - *Initial work* - [CappeDiem](https://github.com/CappeDiem)
+* **ningmenhao** - *v1.0 and v2.0* - [ningmenhao](https://github.com/ningmenhao)
 
 ## Built With
 
 * [Node.js](https://nodejs.org/en/) - the base that the bot runs on
 * [discord.js](https://discord.js.org/#/) - node.js link to the discord bot api
+* [python](https://python.org) - runs the REST API commands needed to update slash commands
