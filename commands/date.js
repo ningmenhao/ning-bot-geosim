@@ -3,7 +3,7 @@ module.exports = {
 	description: 'Replies with the current ingame date!',
 	async execute(interaction) {
 		// Remember months count from 0. January is 0, August is 7, December is 11
-		const seasonStartDate = Date.UTC(2021, 10, 8);
+		const seasonStartDate = Date.UTC(2022, 2, 20);
 
 		const now = Date.now();
 		const year = (Math.floor((now - seasonStartDate) / 604800000) + 2021).toString();
