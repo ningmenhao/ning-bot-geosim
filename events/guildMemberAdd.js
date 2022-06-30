@@ -3,8 +3,11 @@ module.exports = {
 	name: 'guildMemberAdd',
 	execute(member){
 		console.log(`User ${member.user.id} joined the server`);
-		member.guild.channels.cache.get('712949115943911475').send(
-			`**@${member.user.id}, welcome to Geosim!** A mod will be in shortly to give you access to the rest of the server. In the meantime, let us know where you found us! @Moderator`
-		);
+		let welcomembed = new Discord.MessageEmbed()
+        		.setAuthor(`${member.user.tag} just joined!`, member.user.avatarURL())
+        		.setDescription("Welcome to Angry Birds Economy Server! Don't forget to read the <#748333038294794241>! <:WelcomePigHappy:777683105863041054>")
+        		.setColor("FF0000");
+    		member.guild.channels.cache.get("712949115943911475").send(welcomembed)
+			.catch((err) => console.log(err));
 	},
 };
