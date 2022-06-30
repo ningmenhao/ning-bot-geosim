@@ -7,7 +7,7 @@ module.exports = {
         		.setAuthor(`${member.user.tag} just joined!`, member.user.avatarURL())
         		.setDescription(`<@${member.user.id}>, welcome to Geosim! A mod will be in shortly to give you access to the rest of the server. In the meantime, let us know where you found us! <@&214543567878750208>`)
         		.setColor("FF0000");
-    		member.guild.channels.cache.get("712949115943911475").send({ embeds: [welcomeEmbed] })
+    		member.guild.channels.cache.get("666082548715094043").send({ embeds: [welcomeEmbed] })
 			.catch((err) => console.log(err));
 	},
 };
