@@ -6,8 +6,9 @@ module.exports = {
 
 		const playerlistEmbed = new MessageEmbed()
 			.setColor('#5b92e5')
-			.setTitle("List of Current and Open Claims")
-			.setDescription("geosim.xpowers.cyou or https://www.reddit.com/r/geosim/wiki/players");
+			.setTitle('List of Current and Open Claims')
+			.setURL('https://www.reddit.com/r/geosim/wiki/players')
+			.setDescription("[Check the player master list](https://www.reddit.com/r/geosim/wiki/players) or [our website](geosim.xpowers.cyou)");
 
 		await interaction.reply({embeds: [playerlistEmbed]});
 	},
