@@ -7,7 +7,7 @@ module.exports = {
 
 		const now = Date.now();
 		const year = (Math.floor((now - seasonStartDate) / 604800000) + 2022).toString();
-		const lookup = ['January', 'February/March', 'April/May', 'June', 'July/August', 'September/October', 'November/December'];
+		const lookup = [ "November/December", "January", "February/March", "April/May", "June", "July/August", "September/October" ];
 		const month = lookup[new Date().getDay()];
 
 		await interaction.reply(`The date is ${month} ${year}!`);
