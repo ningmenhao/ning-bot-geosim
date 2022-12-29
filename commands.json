@@ -28,5 +28,9 @@
     {
         "name": "players",
         "description": "Provide a link to the list of currently claimed players"
+    },
+    {
+	"name": "newbie",
+	"description": "Provide a link to the player's guide"
     }
 ]
