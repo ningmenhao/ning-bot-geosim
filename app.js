@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
-const token = process.env.BOT_TOKEN;
+const { BOT_TOKEN } = require('./environment.js');
+const token = BOT_TOKEN;
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS] });
 client.commands = new Collection();
@@ -16,10 +17,26 @@ for (const file of commandFiles) {
 for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
 	if (event.once) {
-		client.once(event.name, (...args) => event.execute(...args, client));
+		client.once(event.name, (...args) => {
+				try {
+					event.execute(...args, client);
+				}
+				catch (error) {
+					console.error(error);
+				}
+			}
+		);
 	}
 	else {
-		client.on(event.name, (...args) => event.execute(...args, client));
+		client.on(event.name, (...args) => {
+				try {
+					event.execute(...args, client);
+				}
+				catch (error) {
+					console.log(error);
+				}
+			}
+		);
 	}
 }
 
